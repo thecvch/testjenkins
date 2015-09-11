@@ -12,28 +12,24 @@ import javax.servlet.http.HttpServletResponse;
 //Extend HttpServlet class
 public class Helloworld extends HttpServlet {
 
-private String message;
+	private String message;
 
-public void init() throws ServletException
-{
-   // Do required initialization
-   message = "Hello World";
-}
+	public void init() throws ServletException {
+		// Do required initialization
+		message = "Hello World";
+	}
 
-public void doGet(HttpServletRequest request,
-                 HttpServletResponse response)
-         throws ServletException, IOException
-{
-   // Set response content type
-   response.setContentType("text/html");
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// Set response content type
+		response.setContentType("text/html");
 
-   // Actual logic goes here.
-   PrintWriter out = response.getWriter();
-   out.println("<h1>" + message + "</h1>");
-}
+		// Actual logic goes here.
+		PrintWriter out = response.getWriter();
+		out.println("<h1>" + message + "</h1>");
+	}
 
-public void destroy()
-{
-   // do nothing.
-}
+	public void destroy() {
+		// do nothing.
+	}
 }
